@@ -16,7 +16,7 @@ let positions = {"P": "Pitcher",
     "DH": "Designated Hitter"} as const;
 let jerseyNumbers = Array.from({length:99}, (_, i) => i + 1);
 
-let heightAndInches = Array.from({length: 25}, (_, i) => `${5 + Math.floor(i / 12)}'${i % 12}"`); // 5'0" to 6'0"
+let heightAndInches = Array.from({length: 25}, (_, i) => `${5 + Math.floor(i / 12)}'${i % 12}"`); // 5'0" to 7'0"
 let weight = Array.from({length: 101}, (_, i) => 150 + i); // 150 to 250 lbs
 
 let battingHands = { "L": "Left", "R": "Right", "S": "Switch" } as const;
