@@ -9,6 +9,7 @@ interface PositionPlayerStats {
     RBIs: number;
     stolenBases: number;
     OPS: number;
+    leagueRanking: number;
 }
 
 interface PitcherPlayerStats {
@@ -23,6 +24,7 @@ interface PitcherPlayerStats {
     WHIP: number;
     ERA: number;
     completeGames: number;  
+    leagueRanking: number;
 }
 
 interface TeamBatterStats {
@@ -33,6 +35,7 @@ interface TeamBatterStats {
     Hits: number;
     OPS: number;
    StolenBases: number;
+   leagueRanking: number;
 }
 
 interface TeamPitcherStats {
@@ -45,4 +48,6 @@ interface TeamPitcherStats {
     walks: number;
     WHIP: number;
     ERA: number;
+    leagueRanking: number;
+
 }
