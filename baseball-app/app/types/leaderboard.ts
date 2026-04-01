@@ -1,4 +1,4 @@
-interface PositionPlayerStats {
+interface LeaderboardPositionPlayerStats {
   playerId: number;
   season: number;
   teamId: number;
@@ -88,7 +88,7 @@ interface TeamPitcherStats {
 }
 
 export type {
-  PositionPlayerStats,
+  LeaderboardPositionPlayerStats,
   StartingPitcherPlayer,
   ReliefPitcherPlayer,
   CloserPitcherPlayer,

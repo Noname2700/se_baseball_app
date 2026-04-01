@@ -34,3 +34,5 @@ interface PitcherPlayerStats {
   ERA: number;
   leagueRank: number;
 }
+
+export type { PositionPlayerStats, PitcherPlayerStats };
