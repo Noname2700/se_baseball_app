@@ -1,8 +1,10 @@
+import * as info from '../utils/constants';
+
 interface Team {
     id: number;
-    name: string;
+    name: info.TeamFullName;
     city: string;
-    abbreviation: string;
+    abbreviation: info.TeamAbbreviation;
     logoUrl: string;
     record: {
         home: {
@@ -14,5 +16,8 @@ interface Team {
             losses: number;
         }
     };
-    division: string;
+    division: info.Division;
+    league: info.League;
 }
+
+export type { Team };

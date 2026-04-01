@@ -29,14 +29,23 @@ interface LiveGame {
     strikes: number;
     balls: number;
     outs: number;
-    baserunners: {
+
+    batterId?: number;
+    pitcherId?: number;
+    
+    baserunners?: {
         first: boolean;
         second: boolean;
         third: boolean;
     };
+   
     hits: number;
     errors: number;
     runs: number;
+
+    pitchCount?: number;
+    lastPlay?: string;
+
     status: typeof status[keyof typeof status];
 }
 
