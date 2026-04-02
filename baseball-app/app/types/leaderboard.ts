@@ -1,53 +1,284 @@
-interface PositionPlayerStats {
-    playerId: number;
-    season: number;
-    teamId: number;
-    gamesPlayed: number;
-    BattingAverage: number;
-    Hits: number;
-    homeRuns: number;
-    RBIs: number;
-    stolenBases: number;
-    OPS: number;
-    leagueRanking: number;
+interface BatterPlayerStats {
+  playerId: number;
+  season: number;
+  teamId: number;
+  gamesPlayed: number;
+  atBats: number;
+  runs: number;
+  hits: number;
+  doubles: number;
+  triples: number;
+  homeRuns: number;
+  RBIs: number;
+  stolenBases: number;
+  caughtStealing: number;
+  OPS: number;
+  OBS: number;
+  battingAverage: number;
 }
 
-interface PitcherPlayerStats {
-    playerId: number;
-    season: number;
-    teamId: number;
-    wins: number;
-    losses: number;
-    earnedRuns: number;
-    strikeouts: number;
-    walks: number;
-    WHIP: number;
-    ERA: number;
-    completeGames: number;  
-    leagueRanking: number;
+interface CathcherPlayerStats {
+  playerId: number;
+  season: number;
+  teamId: number;
+  gamesPlayed: number;
+  atBats: number;
+  runs: number;
+  hits: number;
+  doubles: number;
+  triples: number;
+  homeRuns: number;
+  RBIs: number;
+  stolenBases: number;
+  caughtStealing: number;
+  OPS: number;
+  OBS: number;
+  battingAverage: number;
+  baserunnersThrownOut: number; // Number of baserunners thrown out while attempting to steal
+  DRS: number; // Defensive Runs Saved
+  passedBallsAllowed: number;
+  blockedBalls: number;
+  catchersInterference: number;
+  popTime: number; // Time taken to throw out a baserunner
+  defensiveRatings: number; // Defensive ratings based on fielding performance
+  errors: number;
 }
 
-interface TeamBatterStats {
-    teamId: number;
-    season: number;
-    homeRuns: number;
-    RBIs: number;
-    Hits: number;
-    OPS: number;
-   StolenBases: number;
-   leagueRanking: number;
+interface DesignatedHitterPlayerStats {
+  playerId: number;
+  season: number;
+  teamId: number;
+  gamesPlayed: number;
+  atBats: number;
+  runs: number;
+  hits: number;
+  doubles: number;
+  triples: number;
+  homeRuns: number;
+  RBIs: number;
+  stolenBases: number;
+  caughtStealing: number;
+  OPS: number;
+  OBS: number;
+  battingAverage: number;
 }
 
-interface TeamPitcherStats {
-    teamId: number;
-    season: number;
-    wins: number;
-    losses: number;
-    earnedRuns: number;
-    strikeouts: number;
-    walks: number;
-    WHIP: number;
-    ERA: number;
-    leagueRanking: number;
-
+interface FirstBasemanPlayerStats {
+  playerId: number;
+  season: number;
+  teamId: number;
+  gamesPlayed: number;
+  atBats: number;
+  runs: number;
+  hits: number;
+  doubles: number;
+  triples: number;
+  homeRuns: number;
+  RBIs: number;
+  stolenBases: number;
+  caughtStealing: number;
+  OPS: number;
+  OBS: number;
+  battingAverage: number;
+  defensiveRatings: number; // Defensive ratings based on fielding performance
+  DRS: number; // Defensive Runs Saved
+  errors: number;
 }
+
+interface SecondBasemanPlayerStats {
+  playerId: number;
+  season: number;
+  teamId: number;
+  gamesPlayed: number;
+  atBats: number;
+  runs: number;
+  hits: number;
+  doubles: number;
+  triples: number;
+  homeRuns: number;
+  RBIs: number;
+  stolenBases: number;
+  caughtStealing: number;
+  OPS: number;
+  OBS: number;
+  battingAverage: number;
+  defensiveRatings: number; // Defensive ratings based on fielding performance
+  DRS: number; // Defensive Runs Saved
+  errors: number;
+}
+
+interface ShortstopPlayerStats {
+  playerId: number;
+  season: number;
+  teamId: number;
+  gamesPlayed: number;
+  atBats: number;
+  runs: number;
+  hits: number;
+  doubles: number;
+  triples: number;
+  homeRuns: number;
+  RBIs: number;
+  stolenBases: number;
+  caughtStealing: number;
+  OPS: number;
+  OBS: number;
+  battingAverage: number;
+  defensiveRatings: number; // Defensive ratings based on fielding performance
+  DRS: number; // Defensive Runs Saved
+  errors: number;
+}
+
+interface ThirdBasemanPlayerStats {
+  playerId: number;
+  season: number;
+  teamId: number;
+  gamesPlayed: number;
+  atBats: number;
+  runs: number;
+  hits: number;
+  doubles: number;
+  triples: number;
+  homeRuns: number;
+  RBIs: number;
+  stolenBases: number;
+  caughtStealing: number;
+  OPS: number;
+  OBS: number;
+  battingAverage: number;
+  defensiveRatings: number; // Defensive ratings based on fielding performance
+  DRS: number; // Defensive Runs Saved
+  errors: number;
+}
+
+interface RightFielderPlayerStats {
+  playerId: number;
+  season: number;
+  teamId: number;
+  gamesPlayed: number;
+  atBats: number;
+  runs: number;
+  hits: number;
+  doubles: number;
+  triples: number;
+  homeRuns: number;
+  RBIs: number;
+  stolenBases: number;
+  caughtStealing: number;
+  OPS: number;
+  OBS: number;
+  battingAverage: number;
+  defensiveRatings: number; // Defensive ratings based on fielding performance
+  DRS: number; // Defensive Runs Saved
+  outfieldThrownOuts: number; // Number of baserunners thrown out while attempting to advance on the basepaths
+  errors: number;
+}
+
+interface CenterFielderPlayerStats {
+  playerId: number;
+  season: number;
+  teamId: number;
+  gamesPlayed: number;
+  atBats: number;
+  runs: number;
+  hits: number;
+  doubles: number;
+  triples: number;
+  homeRuns: number;
+  RBIs: number;
+  stolenBases: number;
+  caughtStealing: number;
+  OPS: number;
+  OBS: number;
+  battingAverage: number;
+  defensiveRatings: number; // Defensive ratings based on fielding performance
+  DRS: number; // Defensive Runs Saved
+  outfieldThrownOuts: number; // Number of baserunners thrown out while attempting to advance on the basepaths
+  errors: number;
+}
+
+interface LeftFielderPlayerStats {
+  playerId: number;
+  season: number;
+  teamId: number;
+  gamesPlayed: number;
+  atBats: number;
+  runs: number;
+  hits: number;
+  doubles: number;
+  triples: number;
+  homeRuns: number;
+  RBIs: number;
+  stolenBases: number;
+  caughtStealing: number;
+  OPS: number;
+  OBS: number;
+  battingAverage: number;
+  defensiveRatings: number; // Defensive ratings based on fielding performance
+  DRS: number; // Defensive Runs Saved
+  outfieldThrownOuts: number; // Number of baserunners thrown out while attempting to advance on the basepaths
+  errors: number;
+}
+
+interface StartingPitcherPlayer {
+  id: number;
+  name: string;
+  teamId: number;
+  position: string;
+  inningsPitched: number;
+  wins: number;
+  losses: number;
+  earnedRuns: number;
+  strikeouts: number;
+  walks: number;
+  WHIP: number;
+  ERA: number;
+}
+
+interface ReliefPitcherPlayer {
+  id: number;
+  name: string;
+  teamId: number;
+  position: string;
+  inningsPitched: number;
+  wins: number;
+  losses: number;
+  saves: number;
+  earnedRuns: number;
+  strikeouts: number;
+  walks: number;
+  WHIP: number;
+  ERA: number;
+}
+
+interface CloserPitcherPlayer {
+  id: number;
+  name: string;
+  teamId: number;
+  position: string;
+  inningsPitched: number;
+  wins: number;
+  losses: number;
+  saves: number;
+  earnedRuns: number;
+  strikeouts: number;
+  walks: number;
+  WHIP: number;
+  ERA: number;
+}
+
+export type {
+  BatterPlayerStats,
+  CathcherPlayerStats,
+  DesignatedHitterPlayerStats,
+  FirstBasemanPlayerStats,
+  SecondBasemanPlayerStats,
+  ShortstopPlayerStats,
+  ThirdBasemanPlayerStats,
+  RightFielderPlayerStats,
+  CenterFielderPlayerStats,
+  LeftFielderPlayerStats,
+  StartingPitcherPlayer,
+  ReliefPitcherPlayer,
+  CloserPitcherPlayer,
+};
