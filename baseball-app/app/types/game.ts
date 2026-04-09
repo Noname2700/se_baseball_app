@@ -1,62 +1,62 @@
-import  *  as  status from "../utils/constants";
+import * as status from "../utils/constants";
 
 interface Game {
-    id: number;
-    date: string;
-    homeTeam: string;
-    awayTeam: string;
-    homeScore: number;
-    awayScore: number;
+  id: number;
+  date: string;
+  homeTeam: string;
+  awayTeam: string;
+  homeScore: number;
+  awayScore: number;
 }
 
 interface PreScheduledGame {
-    id: number;
-    date: string;
-    time: string;
-    homeTeam: string;
-    awayTeam: string;
-    status: typeof status[keyof typeof status];
-} 
+  id: number;
+  date: string;
+  time: string;
+  homeTeam: string;
+  awayTeam: string;
+  status: (typeof status)[keyof typeof status];
+}
 
 interface LiveGame {
-    id: number;
-    homeTeam: string;
-    awayTeam: string;
-    homeScore: number;
-    awayScore: number;
-    inning: number;
-    isTopInning: boolean;
-    strikes: number;
-    balls: number;
-    outs: number;
+  id: number;
+  homeTeam: string;
+  awayTeam: string;
+  homeScore: number;
+  awayScore: number;
+  inning: number;
+  isTopInning: boolean;
+  strikes: number;
+  balls: number;
+  outs: number;
 
-    batterId?: number;
-    pitcherId?: number;
-    
-    baserunners?: {
-        first: boolean;
-        second: boolean;
-        third: boolean;
-    };
-   
-    hits: number;
-    errors: number;
-    runs: number;
+  batterId?: number;
+  pitcherId?: number;
 
-    pitchCount?: number;
-    lastPlay?: string;
+  baserunners?: {
+    first: boolean;
+    second: boolean;
+    third: boolean;
+  };
 
-    status: typeof status[keyof typeof status];
+  hits: number;
+  errors: number;
+  runs: number;
+
+  pitchCount?: number;
+  lastPlay?: string;
+
+  status: (typeof status)[keyof typeof status];
 }
 
 interface PostGame {
-    id: number;
-    date: string;
-    homeTeam: string;
-    awayTeam: string;
-    homeScore: number;
-    awayScore: number;
-    status: typeof status[keyof typeof status];
+  id: number;
+  date: string;
+  homeTeam: string;
+  awayTeam: string;
+  homeScore: number;
+  awayScore: number;
+  status: (typeof status)[keyof typeof status];
 }
 
 export type { Game, PreScheduledGame, LiveGame, PostGame };
