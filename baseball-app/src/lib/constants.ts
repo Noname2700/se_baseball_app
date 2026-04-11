@@ -116,6 +116,7 @@ const teamsFullNames = [
 
 // Derived TypeScript types
 type Status = (typeof status)[keyof typeof status];
+type PositionKey = keyof typeof positions;
 type Position = (typeof positions)[keyof typeof positions];
 type JerseyNumber = (typeof jerseyNumbers)[number];
 type Height = (typeof heights)[number];
@@ -145,6 +146,7 @@ export {
 
 export type {
   Status,
+  PositionKey,
   Position,
   JerseyNumber,
   Height,

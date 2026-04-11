@@ -1,4 +1,4 @@
-interface BatterPlayerStats {
+interface BaseOffensiveStats {
   playerId: number;
   season: number;
   teamId: number;
@@ -17,23 +17,11 @@ interface BatterPlayerStats {
   battingAverage: number;
 }
 
-interface CatcherPlayerStats {
-  playerId: number;
-  season: number;
-  teamId: number;
-  gamesPlayed: number;
-  atBats: number;
-  runs: number;
-  hits: number;
-  doubles: number;
-  triples: number;
-  homeRuns: number;
-  RBIs: number;
-  stolenBases: number;
-  caughtStealing: number;
-  OPS: number;
-  OBP: number;
-  battingAverage: number;
+interface BatterPlayerStats extends BaseOffensiveStats {
+  leagueRanking: number;
+}
+
+interface CatcherPlayerStats extends BaseOffensiveStats {
   baserunnersThrownOut: number;
   DRS: number;
   passedBallsAllowed: number;
@@ -45,66 +33,18 @@ interface CatcherPlayerStats {
   leagueRanking: number;
 }
 
-interface DesignatedHitterPlayerStats {
-  playerId: number;
-  season: number;
-  teamId: number;
-  gamesPlayed: number;
-  atBats: number;
-  runs: number;
-  hits: number;
-  doubles: number;
-  triples: number;
-  homeRuns: number;
-  RBIs: number;
-  stolenBases: number;
-  caughtStealing: number;
-  OPS: number;
-  OBP: number;
-  battingAverage: number;
+interface DesignatedHitterPlayerStats extends BaseOffensiveStats {
   leagueRanking: number;
 }
 
-interface InfieldPlayerStats {
-  playerId: number;
-  season: number;
-  teamId: number;
-  gamesPlayed: number;
-  atBats: number;
-  runs: number;
-  hits: number;
-  doubles: number;
-  triples: number;
-  homeRuns: number;
-  RBIs: number;
-  stolenBases: number;
-  caughtStealing: number;
-  OPS: number;
-  OBP: number;
-  battingAverage: number;
+interface InfieldPlayerStats extends BaseOffensiveStats {
   defensiveRatings: number;
   DRS: number;
   errors: number;
   leagueRanking: number;
 }
 
-interface OutfieldPlayerStats {
-  playerId: number;
-  season: number;
-  teamId: number;
-  gamesPlayed: number;
-  atBats: number;
-  runs: number;
-  hits: number;
-  doubles: number;
-  triples: number;
-  homeRuns: number;
-  RBIs: number;
-  stolenBases: number;
-  caughtStealing: number;
-  OPS: number;
-  OBP: number;
-  battingAverage: number;
+interface OutfieldPlayerStats extends BaseOffensiveStats {
   defensiveRatings: number;
   DRS: number;
   outfieldThrownOuts: number;
@@ -164,6 +104,7 @@ interface CloserStats {
 }
 
 export type {
+  BaseOffensiveStats,
   BatterPlayerStats,
   CatcherPlayerStats,
   DesignatedHitterPlayerStats,
