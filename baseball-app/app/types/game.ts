@@ -1,16 +1,16 @@
 import * as status from "../utils/constants";
 
 interface Game {
-  id: number;
+  id: string;
   date: string;
-  homeTeam: string;
-  awayTeam: string;
+  homeTeam: string; // team id
+  awayTeam: string; // team id
   homeScore: number;
   awayScore: number;
 }
 
 interface PreScheduledGame {
-  id: number;
+  id: string;
   date: string;
   time: string;
   homeTeam: string;
@@ -19,7 +19,7 @@ interface PreScheduledGame {
 }
 
 interface LiveGame {
-  id: number;
+  id: string;
   homeTeam: string;
   awayTeam: string;
   homeScore: number;
@@ -30,8 +30,8 @@ interface LiveGame {
   balls: number;
   outs: number;
 
-  batterId?: number;
-  pitcherId?: number;
+  batterId?: string;
+  pitcherId?: string;
 
   baserunners?: {
     first: boolean;
@@ -50,7 +50,7 @@ interface LiveGame {
 }
 
 interface PostGame {
-  id: number;
+  id: string;
   date: string;
   homeTeam: string;
   awayTeam: string;

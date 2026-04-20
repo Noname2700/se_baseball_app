@@ -1,7 +1,7 @@
 interface PositionPlayerStats {
-  playerId: number;
+  playerId: string;
   season: number;
-  teamId: number;
+  teamId: string;
   BattingAverage: number;
   homeRuns: number;
   RBIs: number;
@@ -11,9 +11,9 @@ interface PositionPlayerStats {
 }
 
 interface PitcherPlayerStats {
-  playerId: number;
+  playerId: string;
   season: number;
-  teamId: number;
+  teamId: string;
   gamesPlayed: number;
   inningsPitched: number;
   wins: number;
@@ -26,7 +26,7 @@ interface PitcherPlayerStats {
 }
 
 interface TeamBatterStats {
-  teamId: number;
+  teamId: string;
   season: number;
   battingAverage: number;
   homeRuns: number;
@@ -38,7 +38,7 @@ interface TeamBatterStats {
 }
 
 interface TeamPitcherStats {
-  teamId: number;
+  teamId: string;
   season: number;
   wins: number;
   losses: number;

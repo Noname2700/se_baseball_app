@@ -1,7 +1,7 @@
 interface BatterPlayerStats {
-  playerId: number;
+  playerId: string;
   season: number;
-  teamId: number;
+  teamId: string;
   gamesPlayed: number;
   atBats: number;
   runs: number;
@@ -18,9 +18,9 @@ interface BatterPlayerStats {
 }
 
 interface CathcherPlayerStats {
-  playerId: number;
+  playerId: string;
   season: number;
-  teamId: number;
+  teamId: string;
   gamesPlayed: number;
   atBats: number;
   runs: number;
@@ -45,9 +45,9 @@ interface CathcherPlayerStats {
 }
 
 interface DesignatedHitterPlayerStats {
-  playerId: number;
+  playerId: string;
   season: number;
-  teamId: number;
+  teamId: string;
   gamesPlayed: number;
   atBats: number;
   runs: number;
@@ -64,9 +64,9 @@ interface DesignatedHitterPlayerStats {
 }
 
 interface FirstBasemanPlayerStats {
-  playerId: number;
+  playerId: string;
   season: number;
-  teamId: number;
+  teamId: string;
   gamesPlayed: number;
   atBats: number;
   runs: number;
@@ -86,9 +86,9 @@ interface FirstBasemanPlayerStats {
 }
 
 interface SecondBasemanPlayerStats {
-  playerId: number;
+  playerId: string;
   season: number;
-  teamId: number;
+  teamId: string;
   gamesPlayed: number;
   atBats: number;
   runs: number;
@@ -108,9 +108,9 @@ interface SecondBasemanPlayerStats {
 }
 
 interface ShortstopPlayerStats {
-  playerId: number;
+  playerId: string;
   season: number;
-  teamId: number;
+  teamId: string;
   gamesPlayed: number;
   atBats: number;
   runs: number;
@@ -130,9 +130,9 @@ interface ShortstopPlayerStats {
 }
 
 interface ThirdBasemanPlayerStats {
-  playerId: number;
+  playerId: string;
   season: number;
-  teamId: number;
+  teamId: string;
   gamesPlayed: number;
   atBats: number;
   runs: number;
@@ -152,9 +152,9 @@ interface ThirdBasemanPlayerStats {
 }
 
 interface RightFielderPlayerStats {
-  playerId: number;
+  playerId: string;
   season: number;
-  teamId: number;
+  teamId: string;
   gamesPlayed: number;
   atBats: number;
   runs: number;
@@ -175,9 +175,9 @@ interface RightFielderPlayerStats {
 }
 
 interface CenterFielderPlayerStats {
-  playerId: number;
+  playerId: string;
   season: number;
-  teamId: number;
+  teamId: string;
   gamesPlayed: number;
   atBats: number;
   runs: number;
@@ -198,9 +198,9 @@ interface CenterFielderPlayerStats {
 }
 
 interface LeftFielderPlayerStats {
-  playerId: number;
+  playerId: string;
   season: number;
-  teamId: number;
+  teamId: string;
   gamesPlayed: number;
   atBats: number;
   runs: number;
@@ -221,9 +221,9 @@ interface LeftFielderPlayerStats {
 }
 
 interface StartingPitcherPlayer {
-  id: number;
+  id: string;
   name: string;
-  teamId: number;
+  teamId: string;
   position: string;
   inningsPitched: number;
   wins: number;
@@ -236,9 +236,9 @@ interface StartingPitcherPlayer {
 }
 
 interface ReliefPitcherPlayer {
-  id: number;
+  id: string;
   name: string;
-  teamId: number;
+  teamId: string;
   position: string;
   inningsPitched: number;
   wins: number;
@@ -252,9 +252,9 @@ interface ReliefPitcherPlayer {
 }
 
 interface CloserPitcherPlayer {
-  id: number;
+  id: string;
   name: string;
-  teamId: number;
+  teamId: string;
   position: string;
   inningsPitched: number;
   wins: number;

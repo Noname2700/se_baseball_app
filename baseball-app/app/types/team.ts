@@ -1,7 +1,7 @@
 import * as info from "../utils/constants";
 
 interface Team {
-  id: number;
+  id: string;
   name: info.TeamFullName;
   city: string;
   abbreviation: info.TeamAbbreviation;

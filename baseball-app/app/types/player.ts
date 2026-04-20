@@ -1,9 +1,9 @@
 import * as info from "../utils/constants";
 
 interface Player {
-  id: number;
+  id: string;
   name: string;
-  teamId: number;
+  teamId: string;
   position: info.Position;
   jersey: info.JerseyNumber;
   height: info.HeightAndInches;
