@@ -18,7 +18,7 @@ interface PitcherPlayerStats {
   inningsPitched: number;
   wins: number;
   losses: number;
-  ERA: number; // earned run on average
+  ERA: number; // earnings run average
   strikeouts: number;
   walks: number;
   WHIP: number;
