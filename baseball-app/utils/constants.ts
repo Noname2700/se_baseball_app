@@ -1,3 +1,9 @@
+export const API_BASE_URL = "https://rapidapi.com/api/v1";
+
+export const API_KEY = process.env.NEXT_PUBLIC_API_KEY || "";
+
+
+
 let status = {
   Scheduled: "Scheduled",
   Live: "Live",

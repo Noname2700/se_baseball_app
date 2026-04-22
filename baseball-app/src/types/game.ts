@@ -1,4 +1,4 @@
-import * as status from "../utils/constants";
+import { Status } from "../../utils/constants";
 
 interface Game {
   id: string;
@@ -15,7 +15,7 @@ interface PreScheduledGame {
   time: string;
   homeTeam: string;
   awayTeam: string;
-  status: (typeof status)[keyof typeof status];
+  status: Status;
 }
 
 interface LiveGame {
@@ -46,7 +46,7 @@ interface LiveGame {
   pitchCount?: number;
   lastPlay?: string;
 
-  status: (typeof status)[keyof typeof status];
+  status: Status;
 }
 
 interface PostGame {
@@ -56,7 +56,7 @@ interface PostGame {
   awayTeam: string;
   homeScore: number;
   awayScore: number;
-  status: (typeof status)[keyof typeof status];
+  status: Status;
 }
 
 export type { Game, PreScheduledGame, LiveGame, PostGame };

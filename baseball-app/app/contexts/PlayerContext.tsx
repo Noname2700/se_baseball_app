@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, ReactNode } from "react";
-import { Player } from "../types/player";
+import { Player } from "../../src/types/player";
 
 interface PlayerContextType {
   setPlayerId: (id: string) => Promise<void>;
@@ -29,7 +29,7 @@ export function PlayerProvider({ children }: { children: ReactNode }) {
       } catch (error: unknown) {
         console.error("Error fetching player data:", error);
       }
-    }
+    },
   };
 
   return (

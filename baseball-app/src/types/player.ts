@@ -1,4 +1,4 @@
-import * as info from "../utils/constants";
+import * as info from "../../utils/constants";
 
 interface Player {
   id: string;
